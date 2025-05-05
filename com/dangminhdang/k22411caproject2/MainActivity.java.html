@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>MainActivity.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #7a7e85;}
+.s4 { color: #6aab73;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+MainActivity.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">dangminhdang</span><span class="s2">.</span><span class="s1">k22411caproject2</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">android</span><span class="s2">.</span><span class="s1">os</span><span class="s2">.</span><span class="s1">Bundle</span><span class="s2">;</span>
+
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">activity</span><span class="s2">.</span><span class="s1">EdgeToEdge</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">appcompat</span><span class="s2">.</span><span class="s1">app</span><span class="s2">.</span><span class="s1">AppCompatActivity</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">graphics</span><span class="s2">.</span><span class="s1">Insets</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">ViewCompat</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">androidx</span><span class="s2">.</span><span class="s1">core</span><span class="s2">.</span><span class="s1">view</span><span class="s2">.</span><span class="s1">WindowInsetsCompat</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">MainActivity </span><span class="s0">extends </span><span class="s1">AppCompatActivity </span><span class="s2">{</span>
+    <span class="s1">EditText edtCOA</span><span class="s2">;</span>
+    <span class="s1">EditText edtCOB</span><span class="s2">;</span>
+    <span class="s1">TextView txtResult</span><span class="s2">;</span>
+
+    <span class="s1">@Override</span>
+    <span class="s0">protected void </span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">Bundle savedInstanceState</span><span class="s2">) {</span>
+        <span class="s0">super</span><span class="s2">.</span><span class="s1">onCreate</span><span class="s2">(</span><span class="s1">savedInstanceState</span><span class="s2">);</span>
+        <span class="s1">EdgeToEdge</span><span class="s2">.</span><span class="s1">enable</span><span class="s2">(</span><span class="s0">this</span><span class="s2">);</span>
+        <span class="s1">setContentView</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">layout</span><span class="s2">.</span><span class="s1">activity_main</span><span class="s2">);</span>
+        <span class="s1">ViewCompat</span><span class="s2">.</span><span class="s1">setOnApplyWindowInsetsListener</span><span class="s2">(</span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">main</span><span class="s2">), (</span><span class="s1">v</span><span class="s2">, </span><span class="s1">insets</span><span class="s2">) </span><span class="s1">-&gt; </span><span class="s2">{</span>
+            <span class="s1">Insets systemBars </span><span class="s2">= </span><span class="s1">insets</span><span class="s2">.</span><span class="s1">getInsets</span><span class="s2">(</span><span class="s1">WindowInsetsCompat</span><span class="s2">.</span><span class="s1">Type</span><span class="s2">.</span><span class="s1">systemBars</span><span class="s2">());</span>
+            <span class="s1">v</span><span class="s2">.</span><span class="s1">setPadding</span><span class="s2">(</span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">left</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">top</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">right</span><span class="s2">, </span><span class="s1">systemBars</span><span class="s2">.</span><span class="s1">bottom</span><span class="s2">);</span>
+            <span class="s0">return </span><span class="s1">insets</span><span class="s2">;</span>
+        <span class="s2">});</span>
+    <span class="s2">}</span>
+
+    <span class="s0">private void </span><span class="s1">addViews</span><span class="s2">() {</span>
+        <span class="s1">edtCOA </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">edtCOA</span><span class="s2">);</span>
+        <span class="s1">edtCOB </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">edtCOB</span><span class="s2">);</span>
+        <span class="s1">txtResult </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">txtResult</span><span class="s2">);</span>
+        <span class="s1">btnChangeLanguage </span><span class="s2">= </span><span class="s1">findViewById</span><span class="s2">(</span><span class="s1">R</span><span class="s2">.</span><span class="s1">id</span><span class="s2">.</span><span class="s1">btnChangeLanguage</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">do_solution</span><span class="s2">(</span><span class="s1">View view</span><span class="s2">) {</span>
+        <span class="s3">// Code giải phương trình ở đây</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">do_next</span><span class="s2">(</span><span class="s1">View view</span><span class="s2">) {</span>
+        <span class="s3">// Code reset các ô nhập ở đây</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public void </span><span class="s1">do_exit</span><span class="s2">(</span><span class="s1">View view</span><span class="s2">) {</span>
+        <span class="s3">// Code thoát app ở đây</span>
+    <span class="s2">}</span>
+    <span class="s0">public void </span><span class="s1">do_change_language</span><span class="s2">(</span><span class="s1">View view</span><span class="s2">) {</span>
+        <span class="s3">// Example: Toggle between English and French</span>
+        <span class="s1">String currentLang </span><span class="s2">= </span><span class="s1">getResources</span><span class="s2">().</span><span class="s1">getConfiguration</span><span class="s2">().</span><span class="s1">locale</span><span class="s2">.</span><span class="s1">getLanguage</span><span class="s2">();</span>
+        <span class="s1">String newLang </span><span class="s2">= </span><span class="s1">currentLang</span><span class="s2">.</span><span class="s1">equals</span><span class="s2">(</span><span class="s4">&quot;en&quot;</span><span class="s2">) ? </span><span class="s4">&quot;fr&quot; </span><span class="s2">: </span><span class="s4">&quot;en&quot;</span><span class="s2">;</span>
+        <span class="s1">changeLanguage</span><span class="s2">(</span><span class="s1">newLang</span><span class="s2">);</span>
+    <span class="s2">}</span>
+    <span class="s0">private void </span><span class="s1">changeLanguage</span><span class="s2">(</span><span class="s1">String langCode</span><span class="s2">) {</span>
+        <span class="s1">Locale locale </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Locale</span><span class="s2">(</span><span class="s1">langCode</span><span class="s2">);</span>
+        <span class="s1">Locale</span><span class="s2">.</span><span class="s1">setDefault</span><span class="s2">(</span><span class="s1">locale</span><span class="s2">);</span>
+        <span class="s1">Configuration config </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Configuration</span><span class="s2">();</span>
+        <span class="s1">config</span><span class="s2">.</span><span class="s1">setLocale</span><span class="s2">(</span><span class="s1">locale</span><span class="s2">);</span>
+        <span class="s1">getResources</span><span class="s2">().</span><span class="s1">updateConfiguration</span><span class="s2">(</span><span class="s1">config</span><span class="s2">, </span><span class="s1">getResources</span><span class="s2">().</span><span class="s1">getDisplayMetrics</span><span class="s2">());</span>
+
+        <span class="s3">// Restart the activity to apply the change</span>
+        <span class="s1">recreate</span><span class="s2">();</span>
+    <span class="s2">}</span>
+
+
+
+
+
+<span class="s2">}</span></pre>
+</body>
+</html>
