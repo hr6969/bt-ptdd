@@ -1,0 +1,113 @@
+<html>
+<head>
+<title>Category.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #2aacb8;}
+.s4 { color: #6aab73;}
+.s5 { color: #7a7e85;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+Category.java</font>
+</center></td></tr></table>
+<pre><span class="s0">package </span><span class="s1">com</span><span class="s2">.</span><span class="s1">dangminhdang</span><span class="s2">.</span><span class="s1">k22411canewsample</span><span class="s2">.</span><span class="s1">models</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">io</span><span class="s2">.</span><span class="s1">Serializable</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">java</span><span class="s2">.</span><span class="s1">util</span><span class="s2">.</span><span class="s1">ArrayList</span><span class="s2">;</span>
+<span class="s0">public class </span><span class="s1">Category </span><span class="s0">implements </span><span class="s1">Serializable </span><span class="s2">{</span>
+    <span class="s0">private int </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String name</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Product</span><span class="s2">&gt; </span><span class="s1">products</span><span class="s2">;</span>
+<span class="s2">}</span>
+<span class="s0">public class </span><span class="s1">Category </span><span class="s0">implements </span><span class="s1">Serializable </span><span class="s2">{</span>
+    <span class="s0">private int </span><span class="s1">id</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">String name</span><span class="s2">;</span>
+    <span class="s0">private int </span><span class="s1">image_id</span><span class="s2">;</span>
+    <span class="s0">private </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Product</span><span class="s2">&gt; </span><span class="s1">products</span><span class="s2">;</span>
+
+    <span class="s0">public </span><span class="s1">Category</span><span class="s2">() {</span>
+    <span class="s2">}</span>
+
+    <span class="s0">public </span><span class="s1">Category</span><span class="s2">(</span><span class="s0">int </span><span class="s1">id</span><span class="s2">, </span><span class="s1">String name</span><span class="s2">, </span><span class="s0">int </span><span class="s1">image_id</span><span class="s2">) {</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">id </span><span class="s2">= </span><span class="s1">id</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">name </span><span class="s2">= </span><span class="s1">name</span><span class="s2">;</span>
+        <span class="s0">this</span><span class="s2">.</span><span class="s1">image_id </span><span class="s2">= </span><span class="s1">image_id</span><span class="s2">;</span>
+    <span class="s2">}</span>
+    <span class="s0">public int </span><span class="s1">getId</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">id</span><span class="s2">; }</span>
+    <span class="s0">public </span><span class="s1">String getName</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">name</span><span class="s2">; }</span>
+    <span class="s0">public int </span><span class="s1">getImage_id</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">image_id</span><span class="s2">; }</span>
+    <span class="s0">public </span><span class="s1">ArrayList</span><span class="s2">&lt;</span><span class="s1">Product</span><span class="s2">&gt; </span><span class="s1">getProducts</span><span class="s2">() { </span><span class="s0">return </span><span class="s1">products</span><span class="s2">; }</span>
+<span class="s2">}</span>
+<span class="s0">private </span><span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Category</span><span class="s2">&gt; </span><span class="s1">generateDummyCategories</span><span class="s2">() {</span>
+    <span class="s1">List</span><span class="s2">&lt;</span><span class="s1">Category</span><span class="s2">&gt; </span><span class="s1">categories </span><span class="s2">= </span><span class="s0">new </span><span class="s1">ArrayList</span><span class="s2">&lt;&gt;();</span>
+
+    <span class="s1">Category c1 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Category</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s4">&quot;Computer Accessories&quot;</span><span class="s2">, </span><span class="s3">110</span><span class="s2">);</span>
+    <span class="s1">c1</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">1</span><span class="s2">, </span><span class="s4">&quot;Wireless Mouse&quot;</span><span class="s2">, </span><span class="s3">50</span><span class="s2">, </span><span class="s3">15.99</span><span class="s2">, </span><span class="s3">1</span><span class="s2">, </span><span class="s3">201</span><span class="s2">));</span>
+    <span class="s1">c1</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">2</span><span class="s2">, </span><span class="s4">&quot;Bluetooth Keyboard&quot;</span><span class="s2">, </span><span class="s3">30</span><span class="s2">, </span><span class="s3">22.49</span><span class="s2">, </span><span class="s3">1</span><span class="s2">, </span><span class="s3">202</span><span class="s2">));</span>
+    <span class="s1">c1</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">11</span><span class="s2">, </span><span class="s4">&quot;Gaming Mousepad&quot;</span><span class="s2">, </span><span class="s3">70</span><span class="s2">, </span><span class="s3">7.50</span><span class="s2">, </span><span class="s3">1</span><span class="s2">, </span><span class="s3">203</span><span class="s2">));</span>
+    <span class="s1">c1</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">14</span><span class="s2">, </span><span class="s4">&quot;Mechanical Keyboard&quot;</span><span class="s2">, </span><span class="s3">12</span><span class="s2">, </span><span class="s3">89.99</span><span class="s2">, </span><span class="s3">1</span><span class="s2">, </span><span class="s3">204</span><span class="s2">));</span>
+
+    <span class="s1">Category c2 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Category</span><span class="s2">(</span><span class="s3">2</span><span class="s2">, </span><span class="s4">&quot;Chargers &amp; Cables&quot;</span><span class="s2">, </span><span class="s3">111</span><span class="s2">);</span>
+    <span class="s1">c2</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">3</span><span class="s2">, </span><span class="s4">&quot;USB-C Charger&quot;</span><span class="s2">, </span><span class="s3">40</span><span class="s2">, </span><span class="s3">12.99</span><span class="s2">, </span><span class="s3">2</span><span class="s2">, </span><span class="s3">205</span><span class="s2">));</span>
+    <span class="s1">c2</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">5</span><span class="s2">, </span><span class="s4">&quot;HDMI Cable&quot;</span><span class="s2">, </span><span class="s3">100</span><span class="s2">, </span><span class="s3">5.49</span><span class="s2">, </span><span class="s3">2</span><span class="s2">, </span><span class="s3">206</span><span class="s2">));</span>
+    <span class="s1">c2</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">9</span><span class="s2">, </span><span class="s4">&quot;Power Bank 10,000mAh&quot;</span><span class="s2">, </span><span class="s3">40</span><span class="s2">, </span><span class="s3">24.99</span><span class="s2">, </span><span class="s3">2</span><span class="s2">, </span><span class="s3">207</span><span class="s2">));</span>
+
+    <span class="s1">Category c3 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Category</span><span class="s2">(</span><span class="s3">3</span><span class="s2">, </span><span class="s4">&quot;Work Setup&quot;</span><span class="s2">, </span><span class="s3">112</span><span class="s2">);</span>
+    <span class="s1">c3</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">4</span><span class="s2">, </span><span class="s4">&quot;Laptop Stand&quot;</span><span class="s2">, </span><span class="s3">20</span><span class="s2">, </span><span class="s3">34.95</span><span class="s2">, </span><span class="s3">3</span><span class="s2">, </span><span class="s3">208</span><span class="s2">));</span>
+    <span class="s1">c3</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">7</span><span class="s2">, </span><span class="s4">&quot;Notebook Cooler&quot;</span><span class="s2">, </span><span class="s3">18</span><span class="s2">, </span><span class="s3">29.90</span><span class="s2">, </span><span class="s3">3</span><span class="s2">, </span><span class="s3">209</span><span class="s2">));</span>
+    <span class="s1">c3</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">12</span><span class="s2">, </span><span class="s4">&quot;Monitor 24inch&quot;</span><span class="s2">, </span><span class="s3">15</span><span class="s2">, </span><span class="s3">149.99</span><span class="s2">, </span><span class="s3">3</span><span class="s2">, </span><span class="s3">210</span><span class="s2">));</span>
+
+    <span class="s1">Category c4 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Category</span><span class="s2">(</span><span class="s3">4</span><span class="s2">, </span><span class="s4">&quot;Office Decor&quot;</span><span class="s2">, </span><span class="s3">113</span><span class="s2">);</span>
+    <span class="s1">c4</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">6</span><span class="s2">, </span><span class="s4">&quot;LED Desk Lamp&quot;</span><span class="s2">, </span><span class="s3">25</span><span class="s2">, </span><span class="s3">19.99</span><span class="s2">, </span><span class="s3">4</span><span class="s2">, </span><span class="s3">211</span><span class="s2">));</span>
+    <span class="s1">c4</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">13</span><span class="s2">, </span><span class="s4">&quot;Desk Organizer&quot;</span><span class="s2">, </span><span class="s3">33</span><span class="s2">, </span><span class="s3">13.49</span><span class="s2">, </span><span class="s3">4</span><span class="s2">, </span><span class="s3">212</span><span class="s2">));</span>
+
+    <span class="s1">Category c5 </span><span class="s2">= </span><span class="s0">new </span><span class="s1">Category</span><span class="s2">(</span><span class="s3">5</span><span class="s2">, </span><span class="s4">&quot;Tech Gadgets&quot;</span><span class="s2">, </span><span class="s3">114</span><span class="s2">);</span>
+    <span class="s1">c5</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">8</span><span class="s2">, </span><span class="s4">&quot;Wireless Earbuds&quot;</span><span class="s2">, </span><span class="s3">35</span><span class="s2">, </span><span class="s3">59.99</span><span class="s2">, </span><span class="s3">5</span><span class="s2">, </span><span class="s3">213</span><span class="s2">));</span>
+    <span class="s1">c5</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">10</span><span class="s2">, </span><span class="s4">&quot;Webcam 1080p&quot;</span><span class="s2">, </span><span class="s3">22</span><span class="s2">, </span><span class="s3">39.99</span><span class="s2">, </span><span class="s3">5</span><span class="s2">, </span><span class="s3">214</span><span class="s2">));</span>
+    <span class="s1">c5</span><span class="s2">.</span><span class="s1">addProduct</span><span class="s2">(</span><span class="s0">new </span><span class="s1">Product</span><span class="s2">(</span><span class="s3">15</span><span class="s2">, </span><span class="s4">&quot;Wireless Router&quot;</span><span class="s2">, </span><span class="s3">17</span><span class="s2">, </span><span class="s3">54.20</span><span class="s2">, </span><span class="s3">5</span><span class="s2">, </span><span class="s3">215</span><span class="s2">));</span>
+
+    <span class="s1">categories</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">c1</span><span class="s2">);</span>
+    <span class="s1">categories</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">c2</span><span class="s2">);</span>
+    <span class="s1">categories</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">c3</span><span class="s2">);</span>
+    <span class="s1">categories</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">c4</span><span class="s2">);</span>
+    <span class="s1">categories</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">c5</span><span class="s2">);</span>
+
+    <span class="s0">return </span><span class="s1">categories</span><span class="s2">;</span>
+<span class="s2">}</span>
+
+
+
+    <span class="s1">@Override</span>
+    <span class="s0">public </span><span class="s1">String toString</span><span class="s2">()</span>
+        <span class="s0">return </span><span class="s1">id</span><span class="s2">+</span><span class="s4">&quot;</span><span class="s0">\t</span><span class="s4">&quot;</span><span class="s2">+</span><span class="s1">name</span><span class="s2">;</span>
+<span class="s2">}</span>
+<span class="s0">public void </span><span class="s1">addProduct</span><span class="s2">(</span><span class="s1">Product p</span><span class="s2">)</span>
+<span class="s2">{</span>
+    <span class="s1">Products</span><span class="s2">.</span><span class="s1">add</span><span class="s2">(</span><span class="s1">p</span><span class="s2">)</span>
+<span class="s2">}</span>
+<span class="s0">public void </span><span class="s1">removeProduct</span><span class="s2">(</span><span class="s0">int </span><span class="s1">id</span><span class="s2">)</span>
+<span class="s2">{</span>
+    <span class="s1">Product p</span><span class="s2">=</span><span class="s0">null</span><span class="s2">;</span>
+    <span class="s0">for </span><span class="s2">(</span><span class="s1">Product item </span><span class="s2">: </span><span class="s1">products</span><span class="s2">) {</span>
+        <span class="s0">if </span><span class="s2">(</span><span class="s1">item</span><span class="s2">.</span><span class="s1">getId</span><span class="s2">() == </span><span class="s1">id</span><span class="s2">) {</span>
+            <span class="s1">p </span><span class="s2">= </span><span class="s1">item</span><span class="s2">;</span>
+            <span class="s0">break</span><span class="s2">;</span>
+
+        <span class="s2">}</span>
+    <span class="s2">}</span>
+    <span class="s0">if </span><span class="s2">(</span><span class="s1">p</span><span class="s2">!=</span><span class="s0">null</span><span class="s2">)</span>
+        <span class="s1">products</span><span class="s2">.</span><span class="s1">remove</span><span class="s2">(</span><span class="s1">p</span><span class="s2">)</span>
+    <span class="s2">}</span>
+    <span class="s2">}</span>
+
+    <span class="s5">// Add other getters/setters if needed</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
