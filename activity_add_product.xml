@@ -9,20 +9,22 @@
 
     <EditText
         android:id="@+id/edtProductName"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
         android:text="Product name"
-        tools:layout_editor_absoluteX="7dp"
+        app:layout_constraintStart_toStartOf="parent"
         tools:layout_editor_absoluteY="130dp" />
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="Add Product"
+        android:textAlignment="center"
         android:textAllCaps="true"
+        android:textSize="24sp"
         android:textStyle="bold"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -30,7 +32,7 @@
 
     <EditText
         android:id="@+id/edtProductID"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
@@ -40,7 +42,7 @@
 
     <EditText
         android:id="@+id/edtProductCode"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:inputType="text"
@@ -50,7 +52,7 @@
 
     <EditText
         android:id="@+id/editTextNumberDecimal"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="Product Price"
@@ -60,7 +62,7 @@
 
     <Button
         android:id="@+id/btn_AddProduct"
-        android:layout_width="wrap_content"
+        android:layout_width="wrap_contentcontent"
         android:layout_height="wrap_content"
         android:text="Add Product"
         tools:layout_editor_absoluteX="141dp"
